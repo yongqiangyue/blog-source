@@ -79,4 +79,4 @@ theme: pure
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:yongqiangyue/yongqiangyue.github.io.git
+  repo: https://GH_TOKEN@github.com/yongqiangyue/yongqiangyue.github.io.git
