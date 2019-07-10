@@ -1,0 +1,28 @@
+language: node_js
+node_js: stable
+
+branches:
+  only:
+    - master
+
+# cache:
+#   directories:
+#     - node_modules
+
+before_install:
+  - npm install -g hexo-cli
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo generate
+
+after_success:
+  - git init
+  - git config --global user.name "yongqiangyue"
+  - git config --global user.email "yongqiangyue@yeah.net"
+  # 替换同目录下的_config.yml文件中GH_TOKEN字符串为travis后台配置的变量
+  - sed -i "s/GH_TOKEN/${GH_TOKEN}/g" ./_config.yml
+  - hexo deploy
