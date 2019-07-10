@@ -97,8 +97,10 @@ donate:
 # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
 share:
   enable: true  # 是否启用分享
-  sites: weibo,qq,wechat,facebook,twitter  # PC端显示的分享图标
-  mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标
+#  sites: weibo,qq,wechat,facebook,twitter  # PC端显示的分享图标
+  sites: qq,wechat  # PC端显示的分享图标
+#  mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标
+  mobile_sites: qq  # 移动端显示的分享图标
 
 # Github
 github:
